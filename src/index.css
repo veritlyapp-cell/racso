@@ -1,0 +1,121 @@
+:root {
+  --bg-color: #0d0d12;
+  --surface-color: #1a1b24;
+  --text-primary: #ffffff;
+  --text-secondary: #9494a3;
+  --neon-green: #00f58d;
+  --neon-violet: #8e2de2;
+  --glass-bg: rgba(26, 27, 36, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --gradient-glow: linear-gradient(90deg, #00f58d 0%, #8e2de2 100%);
+  
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% 0%, #1a1b24 0%, var(--bg-color) 60%);
+}
+
+#root {
+  width: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: var(--neon-green);
+  text-decoration: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-violet);
+  text-shadow: 0 0 8px rgba(142, 45, 226, 0.5);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+
+.text-gradient {
+  background: var(--gradient-glow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.button-primary {
+  background: var(--gradient-glow);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 15px rgba(0, 245, 141, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 245, 141, 0.5);
+}
+
+.button-secondary {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.button-secondary:hover {
+  background: rgba(45, 45, 52, 0.8);
+  border-color: var(--neon-violet);
+  box-shadow: 0 0 15px rgba(142, 45, 226, 0.2);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  text-shadow: none;
+}
